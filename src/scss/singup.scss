@@ -1,0 +1,184 @@
+@import "./variable.scss";
+
+.eventinfo_section {
+    .eventinfo__text {
+        h3 {
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .background_image {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    }
+
+    .eventinfo_announcement {
+        display: flex;
+        margin-top: 40px;
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+        .prize {
+            padding-left: 26px;
+            padding-right: 26px;
+            border-right: 1px solid rgb(104, 104, 104);
+            border-left: 1px solid rgb(104, 104, 104);
+        }
+        .type {
+            padding-right: 26px;
+        }
+        .date {
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+        .green {
+            color: #00e05a;
+        }
+
+        .name {
+            color: #d2d2d2;
+            font-size: 1.1rem;
+            font-weight: normal;
+            text-transform: capitalize;
+            padding-bottom: 4px;
+        }
+        .label {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+        }
+        .border {
+            border-left: 1px solid rgb(104, 104, 104);
+        }
+    }
+
+    .buyticket {
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .paidbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            .fixedprice,
+            .total {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.5rem;
+                width: 100%;
+            }
+            .total {
+                margin-bottom: 20px;
+                border-bottom: 1px solid rgb(104, 104, 104);
+                padding-bottom: 9px;
+            }
+
+            .quantity {
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px 0;
+                margin: 10px 0;
+
+                button {
+                    width: 55px;
+                    height: 45px;
+                    border: 1px solid #000;
+                    color: #000;
+                    border-radius: 6px;
+                    background: rgba(255, 255, 255, 0.911);
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+
+                input {
+                    border: none;
+                    border-top: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    text-align: center;
+                    max-width: 100px;
+                    font-size: 20px;
+                    color: #000;
+                    font-weight: 300;
+                    background: rgba(255, 255, 255, 0.911);
+                }
+            }
+            button {
+                width: 140px;
+                height: 44px;
+                background: $mainyellow;
+                border-radius: 47px;
+                color: #fff;
+                border: none;
+                font-size: 1.1rem;
+                cursor: pointer;
+                outline: none;
+                text-transform: uppercase;
+                font-weight: 550;
+            }
+            button:hover {
+                opacity: 0.85;
+            }
+
+            .accordion {
+                background: none;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                .accordion__label {
+                    border-bottom: none;
+                    font-size: 1rem;
+                    cursor: auto;
+                    padding: 0px;
+                    p {
+                        cursor: pointer;
+                        text-transform: none;
+                    }
+                }
+                .accordion__label:after {
+                    background-image: none;
+                }
+                .accordion__content {
+                    padding-bottom: 2px;
+                    input {
+                        border: none;
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                        text-align: center;
+                        max-width: 100px;
+                        font-size: 1rem;
+                        padding: 10px;
+                        color: #000;
+                        font-weight: 300;
+                        background: hsla(0, 0%, 100%, 0.911);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------- Responsive--------- */
+
+@media all and (max-width: 980px) {
+    .eventinfo_announcement {
+        flex-direction: column;
+
+        .date {
+            border-left: 1px solid rgb(104, 104, 104);
+        }
+        .type {
+            border-left: 1px solid rgb(104, 104, 104);
+            padding-left: 26px;
+        }
+
+        .box {
+            padding-bottom: 20px;
+        }
+    }
+}

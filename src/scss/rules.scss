@@ -1,0 +1,75 @@
+@import "./variable.scss";
+
+.rules_section {
+  padding-bottom: 35px;
+}
+.accordion {
+  max-width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $footercolor;
+}
+
+.accordion__label,
+.accordion__content {
+  padding: 14px 20px;
+}
+
+.accordion__label {
+  display: block;
+  color: rgba(255, 255, 255, 0.822);;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  transition: background 0.1s;
+  border-bottom: 1px solid rgba(133, 143, 182, 0.404);
+}
+.accordion__label:last-child {
+border-bottom: red;
+}
+
+.accordion__label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  background-size: contain;
+  transition: transform 0.4s;
+}
+
+.accordion__content {
+  background: $backgroundcolor;
+  line-height: 1.6rem;
+  font-size: 0.85em;
+  display: none;
+  .title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  p {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked ~ .accordion__content {
+  display: block;
+}
+.accordion__input:checked ~ .accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}

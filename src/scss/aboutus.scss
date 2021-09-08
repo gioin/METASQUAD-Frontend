@@ -1,0 +1,13 @@
+.aboutus_section {
+  padding-bottom: 30px;
+  .container {
+    .aboutus_section__text {
+      width: 100%;
+      p {
+        width: 98%;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
